@@ -94,6 +94,16 @@
     .timeline-img {
         max-width: 100%;
     }
+    /* Electronic Tree responsive layout */
+    .electronic-tree-row .timeline-content {
+        flex-direction: column !important;
+    }
+    .electronic-tree-row .timeline-content > div:last-child {
+        margin-left: 0 !important;
+        margin-top: 1.2rem;
+        max-width: 100% !important;
+        align-self: center;
+    }
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
