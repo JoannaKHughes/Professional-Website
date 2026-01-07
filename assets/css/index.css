@@ -94,6 +94,16 @@
     .timeline-img {
         max-width: 100%;
     }
+    /* Electronic Tree responsive layout */
+    .electronic-tree-row .timeline-content {
+        flex-direction: column !important;
+    }
+    .electronic-tree-row .timeline-content > div:last-child {
+        margin-left: 0 !important;
+        margin-top: 1.2rem;
+        max-width: 100% !important;
+        align-self: center;
+    }
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -120,6 +130,11 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 /*Cht bot*/
  /* Basic styling for the chat icon and chatbox */
@@ -309,6 +324,7 @@ section {
 
 .home-content {
     max-width: 80rem;
+    width: 100%;
     z-index: 99;
 }
 
@@ -329,6 +345,7 @@ section {
 .home-content .text-animate {
     position: relative;
     width: 33rem;
+    max-width: 100%;
 }
 
 .home-content .text-animate h3 {
@@ -369,6 +386,8 @@ section {
     position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 4rem;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Buttons */
@@ -940,6 +959,18 @@ main {
     html {
         font-size: 55%;
     }
+    
+    .home-content h1 {
+        font-size: 5.5rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 2.8rem;
+    }
+    
+    .heading {
+        font-size: 4.5rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -957,6 +988,30 @@ main {
 
     .footer {
         padding: 2rem 4%;
+    }
+    
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 2.5rem;
+    }
+    
+    .heading {
+        font-size: 4rem;
+    }
+    
+    /* Education grid to 1 column on tablets */
+    main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .edu {
+        width: 100%;
+        max-width: 450px;
     }
 }
 
@@ -1029,6 +1084,44 @@ main {
         background-color: var(--bg-color);
         opacity: .6;
     }
+    
+    /* Home section improvements for tablets */
+    .home-content h1 {
+        font-size: 4rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 2.3rem;
+    }
+    
+    .home-content .text-animate {
+        width: 100%;
+    }
+    
+    /* Button adjustments for tablets */
+    .btn-box {
+        width: 100%;
+        max-width: 45rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .btn-box .btn {
+        width: calc(50% - 0.5rem);
+        min-width: 180px;
+        margin-right: 0;
+    }
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    /* Contact section improvements */
+    .contact h1 {
+        font-size: 2rem;
+        line-height: 1.6;
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 520px) {
@@ -1039,6 +1132,7 @@ main {
     .home-content h1 {
         display: flex;
         flex-direction: column;
+        font-size: 3.5rem;
     }
 
     .home-socials {
@@ -1049,11 +1143,104 @@ main {
         width: 38px;
         height: 38px;
     }
+    
+    .home-content .text-animate h3 {
+        font-size: 2.2rem;
+    }
+    
+    /* Buttons stack vertically on mobile */
+    .btn-box {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 1.5rem;
+    }
+    
+    .btn-box .btn {
+        width: 100%;
+        height: 5rem;
+        min-height: 44px; /* Touch target minimum */
+        margin-right: 0;
+    }
+    
+    .heading {
+        font-size: 3rem;
+    }
+    
+    /* Education grid - full width on mobile */
+    main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 10px;
+    }
+    
+    .edu {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Contact section - better mobile readability */
+    .contact h1 {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        padding: 0 1.5rem;
+        word-break: break-word;
+    }
+    
+    .contact h1 span {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 48%;
+    }
+    
+    .home-content h1 {
+        font-size: 3.2rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 2rem;
+    }
+    
+    .home-content p {
+        font-size: 1.6rem;
+        margin: 1.5rem 0 3rem;
+    }
+    
+    .btn-box .btn {
+        font-size: 1.6rem;
+        padding: 0 1rem;
+    }
+    
+    .heading {
+        font-size: 2.8rem;
+    }
+    
+    .contact h1 {
+        font-size: 1.6rem;
+    }
+    
+    /* Timeline adjustments for small screens */
+    .timeline-content {
+        padding: 16px 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-content ul {
+        font-size: 1.2rem;
+    }
 }
 
 @media (max-width: 462px) {
     .home-content h1 {
-        font-size: 5.2rem;
+        font-size: 3rem;
     }
 
     .education {
@@ -1065,6 +1252,18 @@ main {
         flex-direction: column-reverse;
         gap: 2rem;
         text-align: right;
+    }
+    
+    .heading {
+        font-size: 2.5rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 1.8rem;
+    }
+    
+    .home-content p {
+        font-size: 1.5rem;
     }
 }
 
@@ -1078,6 +1277,42 @@ main {
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    
+    .btn-box {
+        align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 45%;
+    }
+    
+    .home-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .home-content .text-animate h3 {
+        font-size: 1.6rem;
+    }
+    
+    .heading {
+        font-size: 2.2rem;
+    }
+    
+    .btn-box .btn {
+        font-size: 1.5rem;
+        height: 5rem; /* Increased to ensure 44px minimum with smaller font-size */
+        min-height: 44px;
+    }
+    
+    .contact h1 {
+        font-size: 1.4rem;
+    }
+    
+    .logo {
+        font-size: 2rem;
     }
 }
 
