@@ -1293,7 +1293,8 @@ main {
     
     .btn-box .btn {
         font-size: 1.5rem;
-        height: 4.8rem;
+        height: 5rem; /* Increased to ensure 44px minimum with smaller font-size */
+        min-height: 44px;
     }
     
     .contact h1 {
