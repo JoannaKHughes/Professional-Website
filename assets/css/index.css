@@ -314,6 +314,7 @@ section {
 
 .home-content {
     max-width: 80rem;
+    width: 100%;
     z-index: 99;
 }
 
@@ -334,6 +335,7 @@ section {
 .home-content .text-animate {
     position: relative;
     width: 33rem;
+    max-width: 100%;
 }
 
 .home-content .text-animate h3 {
